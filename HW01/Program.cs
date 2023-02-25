@@ -7,22 +7,23 @@
 
 int GetNumber(string text)
 {
-  Console.WriteLine(text);
+  Console.Write(text);
   return Convert.ToInt32(Console.ReadLine());
 }
 
 int Main(int numberA, int numberB)
 {
-int degree = numberA;
-int index = 0;
-for (index=1; index < numberB; index++)
-{
-  degree = degree * numberA;
-}
-return degree;
+  int degree = numberA;
+  int index = 0;
+  for (index = 1; index < numberB; index++)
+  {
+    degree = degree * numberA;
+  }
+  return degree;
 }
 
-int numberA = GetNumber("Введите число A ");
-int numberB = GetNumber("Введите число B ");
+int numberA = GetNumber("Введите число A - ");
+int numberB = GetNumber("Введите число B - ");
 int degree = Main(numberA, numberB);
+
 Console.WriteLine("Число " + numberA + " в степени " + numberB + " равно " + degree);
